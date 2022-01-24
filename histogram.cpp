@@ -38,7 +38,7 @@ std::array<ElementType, range> __attribute__ ((noinline)) histogramMaskedScatter
     }
 
     for (size_t i = data.size() & ~(ELEMENT_COUNT - 1); i < data.size(); i++) {
-        histogram[data[i], 0u, range]++;
+        histogram[data[i]]++;
     }
 
     return histogram;
@@ -69,7 +69,7 @@ std::array<ElementType, range> __attribute__ ((noinline)) histogramShiftedMask(s
     }
 
     for (size_t i = data.size() & ~(ELEMENT_COUNT - 1); i < data.size(); i++) {
-        histogram[data[i], 0u, range]++;
+        histogram[data[i]]++;
     }
 
     return histogram;
@@ -97,7 +97,7 @@ std::array<ElementType, range> __attribute__ ((noinline)) histogramShiftedVector
     }
 
     for (size_t i = data.size() & ~(ELEMENT_COUNT - 1); i < data.size(); i++) {
-        histogram[data[i], 0u, range]++;
+        histogram[data[i]]++;
     }
 
     return histogram;
@@ -121,7 +121,7 @@ std::array<ElementType, range> __attribute__ ((noinline)) histogramPOPCNT(std::v
     }
 
     for (size_t i = data.size() & ~(ELEMENT_COUNT - 1); i < data.size(); i++) {
-        histogram[data[i], 0u, range]++;
+        histogram[data[i]]++;
     }
 
     return histogram;
@@ -132,7 +132,7 @@ std::array<ElementType, range> __attribute__ ((noinline)) histogramSequential(st
     std::array<ElementType, range> histogram = {};
 
     for (const auto &datum : data) {
-        histogram[datum, 0u, range]++;
+        histogram[datum]++;
     }
 
     return histogram;
