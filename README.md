@@ -7,6 +7,7 @@ The presentation can be found here: [Link](https://docs.google.com/presentation/
 - [histogram.cpp](./histogram.cpp) has different implementations of a basic histogram
 - [convolutional_histogram.cpp](./convolutional_histogram.cpp) implements a histogram with a simple convolutional filter
 - [convolutional_blur_histogram.cpp](./convolutional_blur_histogram.cpp) implements a histogram with a convolutional filter that averages the values
+- [instruction_timing.cpp](./instruction_timing.cpp) measures the time that certain instructions take to complete
 
 The code is licensed under the [MIT License](./LICENSE).
 
